@@ -1,16 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="InnerCircle.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:InnerCircle"
-    Shell.FlyoutBehavior="Disabled"
-    Title="InnerCircle">
+<Shell x:Class="InnerCircle.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:InnerCircle"
+       Shell.FlyoutBehavior="Disabled"
+       Title="InnerCircle">
+    <TabBar>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <Tab Icon="dotnet_bot.png">
+            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:Views.MainPage}" Route="MainPage" />
+        </Tab>
 
+        <Tab Title="Food Log" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Views.FoodLogPage}" />
+        </Tab>
+
+        <Tab Title="Profile Page" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Views.ProfilePage}" />
+        </Tab>
+        
+    </TabBar>
 </Shell>
-
