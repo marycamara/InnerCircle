@@ -7,15 +7,21 @@
        Title="InnerCircle">
     <TabBar>
 
-        <Tab Icon="dotnet_bot.png">
-            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:Views.MainPage}" Route="MainPage" />
+        <Tab Title="DashBoard"> 
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:Views.MainPage}" Route="MainPage" />
+            </Tab>
+
+
+        <Tab Title="Coffee Beans" >
+            <ShellContent ContentTemplate="{DataTemplate local:Views.CoffeeBeansPage}" />
         </Tab>
 
-        <Tab Title="Food Log" Icon="dotnet_bot.png">
-            <ShellContent ContentTemplate="{DataTemplate local:Views.FoodLogPage}" />
+          <Tab Title="Tea" >
+            <ShellContent ContentTemplate="{DataTemplate local:Views.TeaPage}" />
         </Tab>
 
-        <Tab Title="Profile Page" Icon="dotnet_bot.png">
+
+        <Tab Title="Profile" >
             <ShellContent ContentTemplate="{DataTemplate local:Views.ProfilePage}" />
         </Tab>
         
